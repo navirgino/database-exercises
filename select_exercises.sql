@@ -9,7 +9,7 @@ USE codeup_test_db;
 -- SELECT genre FROM albums WHERE album = 'Nevermind';
 
 
--- SELECT album FROM albums WHERE release_date <= 1999;
+-- SELECT album FROM albums WHERE release_date BETWEEN 1900 AND 1999;
 
 
 -- SELECT album FROM albums WHERE sales <= 20;
