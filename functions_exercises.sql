@@ -1,8 +1,8 @@
 USE employees;
 show tables;
+
 SELECT first_name, last_name, gender
 FROM employees
-
 WHERE (first_name = 'Irena'
     OR first_name = 'Vidya'
     OR first_name = 'Maya')
