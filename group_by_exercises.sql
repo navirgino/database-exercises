@@ -4,16 +4,17 @@ show tables;
 SELECT DISTINCT title
 FROM titles;
 
+
 SELECT last_name, first_name
 FROM employees
-WHERE last_name LIKE 'E%'
-  AND last_name LIKE '%E'
+WHERE last_name LIKE 'E%e'
     GROUP BY last_name, first_name;
 
-SELECT last_name
+SELECT last_name, count(*)
 FROM employees
 WHERE last_name LIKE '%q%' AND last_name NOT LIKE '%qu%'
-GROUP BY last_name;
+GROUP BY last_name
+ORDER BY count(*) desc;
 
 SELECT first_name, last_name, count(*)
 FROM employees
@@ -25,9 +26,15 @@ FROM employees
 WHERE (first_name = 'Irena'
     OR first_name = 'Vidya'
     OR first_name = 'Maya')
-GROUP BY gender
+GROUP BY gender;
 
-
+#What are the names of the 10 most recently hired
+#females in the company? the first 10?
+# #no group by needed
+# SELECT first_name, COUNT(*), gender
+# FROM employees
+# ORDER BY first_name
+# GROUP BY gender;
 
 
 
